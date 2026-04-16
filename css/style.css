@@ -1424,7 +1424,10 @@ height: 85px;
 @media (max-width: 768px) {
     .footer-container { flex-direction: column; text-align: center; }
     .brand-col { max-width: 100%; margin-bottom: 20px; }
-    .social-icons, .app-buttons { justify-content: center; }
+    .social-icons, .app-buttons { justify-content: center;
+    display: flex;
+    margin-left: 59px;
+    width: 166px; }
 }
 /* ====================== RESPONSIVE DESIGN - Modern & Clean ====================== */
 
