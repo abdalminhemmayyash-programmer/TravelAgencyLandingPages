@@ -1,0 +1,225 @@
+/* ============================================================
+   SIGN UP & LOGIN STYLE (Modern Travel Style)
+   ============================================================ */
+
+/* 1. الحاوية الرئيسية لتوسيط الصفحة */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9ff; /* خلفية فاتحة جداً لإبراز الكارد */
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+}
+.logo{
+    color: #f1a501;
+}
+/* 2. الكارد الرئيسي (نفس تصميم اللوجن) */
+.login-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 1150px;
+    display: flex;
+    border-radius: 40px; /* حواف دائرية كبيرة لتناسب ستايل الموقع */
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(24, 30, 75, 0.05);
+    position: relative;
+}
+
+/* 3. الجزء النصي (النماذج) */
+.login-content {
+    flex: 1.1;
+    padding: 50px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.visual-text{
+    font-weight: 600;
+}
+/* العناوين بنفس خط Volkhov */
+.login-title {
+    font-family: 'Volkhov', serif;
+    font-size: 38px;
+    color: #181E4B;
+    margin: 25px 0 10px;
+}
+
+.login-subtitle {
+  color: #5E6282;
+    
+    font-weight: 600;
+    margin-bottom: 35px;
+    
+}
+
+/* 4. تنسيق المدخلات (Inputs) */
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 700;
+    color: #181E4B;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1.5px solid #F1F1F1;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #181E4B;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #f1a501;
+    box-shadow: 0 0 0 4px rgba(241, 165, 1, 0.1);
+    outline: none;
+}
+
+/* الصف المزدوج (للاسم الأول والأخير مثلاً) */
+.input-row {
+    display: flex;
+    gap: 20px;
+}
+
+/* 5. الأزرار (نفس ستايل Find out more) */
+.btn-login {
+    width: 100%;
+    background: #f1a501;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-login:hover {
+    background: #c58700;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(241, 165, 1, 0.2);
+}
+
+/* 6. الجزء البصري (الجرافيكس الجانبي) */
+.login-visual {
+    flex: 0.9;
+    background: #f1a501; /* اللون البرتقالي الأساسي */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    overflow: hidden;
+}
+
+/* تأثير التمويه الخلفي (مثل ستايل الموقع) */
+.visual-bg-shape {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+    top: -25%;
+    right: -25%;
+}
+
+.floating-img {
+    width: 90%;
+    max-width: 400px;
+    z-index: 2;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.1));
+    animation: floating 5s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* 7. الفواصل والروابط */
+.divider {
+    text-align: center;
+    margin: 25px 0;
+    position: relative;
+}
+
+.divider::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #EEEEEE;
+    left: 0;
+    top: 50%;
+    z-index: 1;
+}
+.btn-google {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #E5E5E5;
+    padding: 14px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-google:hover {
+    background: #fcfcfc;
+}
+
+.divider span {
+    background: #fff;
+    padding: 0 15px;
+    position: relative;
+    z-index: 2;
+    color: #A0A0A0;
+    font-size: 13px;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 15px;
+    color: #5E6282;
+    font-weight: 600;
+}
+
+.signup-link a {
+    color: #f1a501;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* 8. الاستجابة (Responsive) */
+@media (max-width: 992px) {
+    .login-container {
+        flex-direction: column;
+        max-width: 550px;
+        border-radius: 30px;
+    }
+    .login-visual {
+        display: none; /* إخفاء الصورة في الموبايل لتقليل الطول */
+    }
+    .login-content {
+        padding: 40px 30px;
+    }
+    .input-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
